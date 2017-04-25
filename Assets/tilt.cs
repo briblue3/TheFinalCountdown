@@ -13,22 +13,22 @@ public class tilt : MonoBehaviour {
 	void Update () {
 		if (Input.GetAxis ("Horizontal") > .2) {
 			foreach (Transform child in transform) {
-				transform.RotateAround (Vector3.zero, Vector3.back, -1);
+				transform.RotateAround (Vector3.zero, Vector3.back, 0.01f);
 			}
 		}
 		if (Input.GetAxis ("Horizontal") < -.2) {
 			foreach (Transform child in transform) {
-				transform.RotateAround (Vector3.zero, Vector3.forward, 1);
+				transform.RotateAround (Vector3.zero, Vector3.forward, 0.01f);
 			}
 		}
 		if (Input.GetAxis ("Vertical") > .2) {
 			foreach (Transform child in transform) {
-				transform.RotateAround (Vector3.zero, Vector3.right, 1);
+				transform.RotateAround (Vector3.zero, Vector3.right, 0.01f);
 			}
 		}
 		if (Input.GetAxis ("Vertical") < -.2) {
 			foreach (Transform child in transform) {
-				transform.RotateAround (Vector3.zero, Vector3.left, -1);
+				transform.RotateAround (Vector3.zero, Vector3.left, 0.01f);
 			}
 		}
 	}

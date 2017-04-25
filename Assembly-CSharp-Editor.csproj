@@ -48,8 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Uniduino\Editor\UniduinoAutorun.cs" />
      <Compile Include="Assets\Uniduino\Editor\UniduinoSetup.cs" />
-     <None Include="Assets\ParticleLight\Read Me\Read Me.txt" />
-     <None Include="Assets\ParticleLight\Shader\AdditiveMask.shader" />
+     <None Include="Assets\Materials\ParticleLight\Read Me\Read Me.txt" />
+     <None Include="Assets\Materials\ParticleLight\Shader\AdditiveMask.shader" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>/Users/bribl/Documents/UnityFiles/TheFinalCountdown/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>

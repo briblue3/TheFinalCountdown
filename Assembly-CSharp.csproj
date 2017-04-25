@@ -74,8 +74,8 @@
      <Compile Include="Assets\oldstuff\take2\Scripts\MazeRoomSettings.cs" />
      <Compile Include="Assets\oldstuff\take2\Scripts\MazeWall.cs" />
      <Compile Include="Assets\tilt.cs" />
-     <None Include="Assets\ParticleLight\Read Me\Read Me.txt" />
-     <None Include="Assets\ParticleLight\Shader\AdditiveMask.shader" />
+     <None Include="Assets\Materials\ParticleLight\Read Me\Read Me.txt" />
+     <None Include="Assets\Materials\ParticleLight\Shader\AdditiveMask.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
