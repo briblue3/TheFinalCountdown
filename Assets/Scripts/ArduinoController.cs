@@ -161,8 +161,26 @@ public class ArduinoController : MonoBehaviour {
 			    System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
 		//	this.transform.Rotate (this.transform.rotation.x + gyroX, this.transform.rotation.y + gyroY, this.transform.rotation.z + gyroZ);
 
-		transform.rotation = Quaternion.Euler (Mathf.Clamp(transform.rotation.x + gyroX, -15.0f, 15.0f), Mathf.Clamp(transform.rotation.y + gyroY, -15.0f, 15.0f), Mathf.Clamp(transform.rotation.z + gyroZ, -15.0f, 15.0f));
+		if (Mathf.Abs (gyroX) > 0.2 || Mathf.Abs (gyroY) > 0.2 || Mathf.Abs (gyroZ) > 0.2) {
+			float x, y, z;
+			if (gyroX < 0) {
+				x = Mathf.Clamp (transform.rotation.x - gyroX, -15.0f, 15.0f);
+			} else {
+				x = Mathf.Clamp (transform.rotation.x + gyroX, -15.0f, 15.0f);
+			}
+			if (gyroY < 0) {
+				y = Mathf.Clamp (transform.rotation.y - gyroY, -15.0f, 15.0f);
+			} else {
+				y = Mathf.Clamp (transform.rotation.y + gyroY, -15.0f, 15.0f);
+			}
+			if (gyroZ < 0) {
+				z = Mathf.Clamp (transform.rotation.z - gyroZ, -15.0f, 15.0f);
+			} else {
+				z = Mathf.Clamp (transform.rotation.z + gyroZ, -15.0f, 15.0f);
+			}
 
+			transform.rotation = Quaternion.Euler (x, y, z);
+		}
 
 //		Vector3 rot = new Vector3 (gyroX, gyroY, gyroZ);
 //			Debug.Log (rot);
